@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad9_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ShowQrcodeView">
+            <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jZH-Cr-is2">
+                    <rect key="frame" x="337" y="204" width="350" height="380"/>
+                    <subviews>
+                        <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="人物" translatesAutoresizingMaskIntoConstraints="NO" id="8bf-Xd-WW0">
+                            <rect key="frame" x="25" y="20" width="300" height="300"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="300" id="QzP-lq-MDh"/>
+                                <constraint firstAttribute="height" constant="300" id="jUK-L7-8P0"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="点击下载" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sgu-wl-CVz">
+                            <rect key="frame" x="140.5" y="335" width="69.5" height="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.31372549020000001" green="0.54117647059999996" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G1i-W3-JR4">
+                            <rect key="frame" x="140.5" y="335" width="69.5" height="30"/>
+                            <connections>
+                                <action selector="saveImgBtnClickAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="jGz-Ry-lcQ"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="350" id="1ep-Op-3B4"/>
+                        <constraint firstAttribute="height" constant="380" id="2Tf-0e-XFW"/>
+                        <constraint firstItem="G1i-W3-JR4" firstAttribute="width" secondItem="sgu-wl-CVz" secondAttribute="width" id="D5O-zO-6Cn"/>
+                        <constraint firstItem="sgu-wl-CVz" firstAttribute="top" secondItem="8bf-Xd-WW0" secondAttribute="bottom" constant="15" id="HyY-Pg-j72"/>
+                        <constraint firstItem="8bf-Xd-WW0" firstAttribute="top" secondItem="jZH-Cr-is2" secondAttribute="top" constant="20" id="OvH-aS-8qg"/>
+                        <constraint firstItem="sgu-wl-CVz" firstAttribute="centerX" secondItem="8bf-Xd-WW0" secondAttribute="centerX" id="coR-YE-T4k"/>
+                        <constraint firstItem="G1i-W3-JR4" firstAttribute="centerX" secondItem="sgu-wl-CVz" secondAttribute="centerX" id="fOq-Qp-Lm1"/>
+                        <constraint firstItem="G1i-W3-JR4" firstAttribute="height" secondItem="sgu-wl-CVz" secondAttribute="height" id="oeV-gD-5Py"/>
+                        <constraint firstItem="G1i-W3-JR4" firstAttribute="centerY" secondItem="sgu-wl-CVz" secondAttribute="centerY" id="r46-pP-1dz"/>
+                        <constraint firstItem="8bf-Xd-WW0" firstAttribute="centerX" secondItem="jZH-Cr-is2" secondAttribute="centerX" id="sFA-56-Eof"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xob-dE-JEk">
+                    <rect key="frame" x="657" y="179" width="55" height="50"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rug-dF-agL">
+                            <rect key="frame" x="0.0" y="0.0" width="55" height="50"/>
+                            <state key="normal" image="cancel"/>
+                            <connections>
+                                <action selector="buttonClickAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="clU-fk-H25"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="rug-dF-agL" secondAttribute="bottom" id="1jY-DN-3La"/>
+                        <constraint firstAttribute="trailing" secondItem="rug-dF-agL" secondAttribute="trailing" id="3b5-Zl-jJO"/>
+                        <constraint firstItem="rug-dF-agL" firstAttribute="top" secondItem="xob-dE-JEk" secondAttribute="top" id="kfj-EC-qPK"/>
+                        <constraint firstAttribute="width" constant="55" id="l2a-EJ-Zxb"/>
+                        <constraint firstItem="rug-dF-agL" firstAttribute="leading" secondItem="xob-dE-JEk" secondAttribute="leading" id="pdn-dl-Pxt"/>
+                        <constraint firstAttribute="height" constant="50" id="rPh-hn-wB2"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="jZH-Cr-is2" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="92Z-Gw-CSV"/>
+                <constraint firstItem="xob-dE-JEk" firstAttribute="top" secondItem="jZH-Cr-is2" secondAttribute="top" constant="-25" id="Fq5-yH-DjS"/>
+                <constraint firstItem="jZH-Cr-is2" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="GFZ-RU-01X"/>
+                <constraint firstItem="xob-dE-JEk" firstAttribute="trailing" secondItem="jZH-Cr-is2" secondAttribute="trailing" constant="25" id="pYd-HJ-ECk"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="phoneBuyLab" destination="sgu-wl-CVz" id="WaX-ds-yaa"/>
+                <outlet property="qrcodeImg" destination="8bf-Xd-WW0" id="OgL-j6-O7o"/>
+            </connections>
+            <point key="canvasLocation" x="258" y="238"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="cancel" width="71" height="64"/>
+        <image name="人物" width="560" height="260"/>
+    </resources>
+</document>

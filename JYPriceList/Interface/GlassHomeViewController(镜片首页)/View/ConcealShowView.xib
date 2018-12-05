@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad9_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ConcealShowView">
+            <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wWa-2z-9GI">
+                    <rect key="frame" x="302" y="184" width="420" height="420"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9gz-b6-j2i">
+                            <rect key="frame" x="0.0" y="370" width="420" height="50"/>
+                            <subviews>
+                                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ErN-GH-dwe">
+                                    <rect key="frame" x="0.0" y="0.0" width="209" height="50"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal" title="同意">
+                                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="buttonClickAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="OPz-9q-mJ3"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XFV-9L-6P6">
+                                    <rect key="frame" x="211" y="0.0" width="209" height="50"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal" title="不同意">
+                                        <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="buttonClickAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="KJV-wR-DrM"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="ErN-GH-dwe" secondAttribute="bottom" id="JZ3-wl-uyI"/>
+                                <constraint firstItem="XFV-9L-6P6" firstAttribute="width" secondItem="ErN-GH-dwe" secondAttribute="width" id="JtX-ww-ZPc"/>
+                                <constraint firstItem="ErN-GH-dwe" firstAttribute="top" secondItem="9gz-b6-j2i" secondAttribute="top" id="Nnw-Fr-Buq"/>
+                                <constraint firstItem="ErN-GH-dwe" firstAttribute="leading" secondItem="9gz-b6-j2i" secondAttribute="leading" id="SNN-Uv-qz8"/>
+                                <constraint firstItem="XFV-9L-6P6" firstAttribute="top" secondItem="9gz-b6-j2i" secondAttribute="top" id="WoC-rz-9uM"/>
+                                <constraint firstAttribute="height" constant="50" id="hTV-Je-u4D"/>
+                                <constraint firstAttribute="bottom" secondItem="XFV-9L-6P6" secondAttribute="bottom" id="ngf-u6-xaS"/>
+                                <constraint firstItem="XFV-9L-6P6" firstAttribute="leading" secondItem="ErN-GH-dwe" secondAttribute="trailing" constant="2" id="sqI-wT-9PN"/>
+                                <constraint firstAttribute="trailing" secondItem="XFV-9L-6P6" secondAttribute="trailing" id="y2M-dF-AMZ"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yzL-0e-gy4">
+                            <rect key="frame" x="0.0" y="0.0" width="420" height="368"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="价目册隐私政策概要" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="amA-3x-htZ">
+                                    <rect key="frame" x="132" y="5" width="156" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Zjc-Ca-cit">
+                                    <rect key="frame" x="5" y="31" width="410" height="337"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <string key="text">感谢您下载价目册！当您开始使用本软件时，我们可能会对您的部分个人信息进行收集、使用和共享。请您仔细阅读《镜库隐私政策》并确定了解我们对您个人信息的处理规则，包括：
+1.我们如何收集和使用您的个人信息
+2.我们如何使用Cookie和同类技术
+3.我们如何共享、转让、公开您的个人信息
+4.我们如何保护和保留您的个人信息
+5.您如何管理个人信息
+6.未成年人信息的保护
+7.如何联系我们
+8.如您同意《镜库隐私政策》，请点
+9击“同意”开始使用我们的产品和服务，我们尽全力保护您的个人信息安全。</string>
+                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                </textView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="Zjc-Ca-cit" firstAttribute="leading" secondItem="yzL-0e-gy4" secondAttribute="leading" constant="5" id="3zr-iO-ovl"/>
+                                <constraint firstItem="Zjc-Ca-cit" firstAttribute="top" secondItem="amA-3x-htZ" secondAttribute="bottom" constant="5" id="VJ8-UO-lAx"/>
+                                <constraint firstItem="amA-3x-htZ" firstAttribute="top" secondItem="yzL-0e-gy4" secondAttribute="top" constant="5" id="cXd-ym-BR6"/>
+                                <constraint firstAttribute="trailing" secondItem="Zjc-Ca-cit" secondAttribute="trailing" constant="5" id="hfU-aq-kxx"/>
+                                <constraint firstAttribute="bottom" secondItem="Zjc-Ca-cit" secondAttribute="bottom" id="jxL-gc-A2c"/>
+                                <constraint firstItem="amA-3x-htZ" firstAttribute="centerX" secondItem="yzL-0e-gy4" secondAttribute="centerX" id="rph-gt-Fpp"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="9gz-b6-j2i" firstAttribute="top" secondItem="yzL-0e-gy4" secondAttribute="bottom" constant="2" id="2BD-UP-Zj2"/>
+                        <constraint firstAttribute="bottom" secondItem="9gz-b6-j2i" secondAttribute="bottom" id="2wc-HI-fMs"/>
+                        <constraint firstItem="yzL-0e-gy4" firstAttribute="leading" secondItem="wWa-2z-9GI" secondAttribute="leading" id="2xl-P6-Gfs"/>
+                        <constraint firstAttribute="trailing" secondItem="yzL-0e-gy4" secondAttribute="trailing" id="9He-l6-QdL"/>
+                        <constraint firstItem="9gz-b6-j2i" firstAttribute="leading" secondItem="wWa-2z-9GI" secondAttribute="leading" id="LUP-Ys-y9S"/>
+                        <constraint firstAttribute="width" constant="420" id="WpZ-5g-1Qc"/>
+                        <constraint firstAttribute="height" constant="420" id="gDx-2C-tJg"/>
+                        <constraint firstAttribute="trailing" secondItem="9gz-b6-j2i" secondAttribute="trailing" id="w3o-yN-tGX"/>
+                        <constraint firstItem="yzL-0e-gy4" firstAttribute="top" secondItem="wWa-2z-9GI" secondAttribute="top" id="xtW-PH-VdR"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="wWa-2z-9GI" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="o2I-h6-wVC"/>
+                <constraint firstItem="wWa-2z-9GI" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="tbi-tD-ldH"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="backView" destination="wWa-2z-9GI" id="W7J-Iu-mjr"/>
+            </connections>
+            <point key="canvasLocation" x="26.3671875" y="31.25"/>
+        </view>
+    </objects>
+</document>
